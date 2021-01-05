@@ -1,13 +1,13 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2021-01-03T18:33:12.659Z",
+  "__export_date": "2021-01-05T16:53:06.859Z",
   "__export_source": "insomnia.desktop.app:v2020.5.2",
   "resources": [
     {
       "_id": "req_765169176bbd4d2d811def8be9e9c744",
       "parentId": "wrk_bbdb1810ca694e21b8ec8056301b4c61",
-      "modified": 1609698138214,
+      "modified": 1609865383190,
       "created": 1609626110574,
       "url": "http://localhost:9000/pie/greeting",
       "name": "Pie Greeting",
@@ -19,8 +19,8 @@
       "authentication": {
         "type": "oauth2",
         "grantType": "authorization_code",
-        "authorizationUrl": "http://localhost:8080/auth/realms/realm-a/protocol/openid-connect/auth",
-        "accessTokenUrl": "http://localhost:8080/auth/realms/realm-a/protocol/openid-connect/token",
+        "authorizationUrl": "http://localhost:8080/auth/realms/one/protocol/openid-connect/auth",
+        "accessTokenUrl": "http://localhost:8080/auth/realms/one/protocol/openid-connect/token",
         "clientId": "insomnia",
         "disabled": false
       },
@@ -93,7 +93,7 @@
     {
       "_id": "req_75c61538fe0a48f48e6b10b158355435",
       "parentId": "wrk_bbdb1810ca694e21b8ec8056301b4c61",
-      "modified": 1609698158818,
+      "modified": 1609865398907,
       "created": 1609627308061,
       "url": "http://localhost:9000/cake/greeting",
       "name": "Cake Greeting",
@@ -105,8 +105,8 @@
       "authentication": {
         "type": "oauth2",
         "grantType": "authorization_code",
-        "authorizationUrl": "http://localhost:8080/auth/realms/realm-a/protocol/openid-connect/auth",
-        "accessTokenUrl": "http://localhost:8080/auth/realms/realm-a/protocol/openid-connect/token",
+        "authorizationUrl": "http://localhost:8080/auth/realms/one/protocol/openid-connect/auth",
+        "accessTokenUrl": "http://localhost:8080/auth/realms/one/protocol/openid-connect/token",
         "clientId": "insomnia"
       },
       "metaSortKey": -1609626110524,
@@ -135,24 +135,24 @@
     {
       "_id": "jar_d3f114af34c1586b0e976798bbe87b386bed063e",
       "parentId": "wrk_bbdb1810ca694e21b8ec8056301b4c61",
-      "modified": 1609698145860,
+      "modified": 1609865484371,
       "created": 1609626096677,
       "name": "Default Jar",
       "cookies": [
         {
           "key": "JSESSIONID",
-          "value": "B95A23DEDE91754632913331CAF61889",
+          "value": "738925AB9843CF31D4B58D5BA323BAA2",
           "domain": "localhost",
           "path": "/",
           "httpOnly": true,
           "hostOnly": true,
           "creation": "2021-01-03T18:22:25.858Z",
-          "lastAccessed": "2021-01-03T18:22:25.858Z",
-          "id": "14545926408032006"
+          "lastAccessed": "2021-01-05T16:51:24.371Z",
+          "id": "8063708724681262"
         },
         {
           "key": "OAuth_Token_Request_State",
-          "value": "94738ff4-e726-45f3-915c-2b7ddfe32161",
+          "value": "ad3be2dc-63c6-4a4a-8138-0dd6137f94e1",
           "domain": "localhost",
           "path": "/",
           "httpOnly": true,
@@ -161,8 +161,8 @@
           ],
           "hostOnly": true,
           "creation": "2021-01-03T18:22:25.859Z",
-          "lastAccessed": "2021-01-03T18:22:25.859Z",
-          "id": "8168829359610243"
+          "lastAccessed": "2021-01-03T23:11:06.395Z",
+          "id": "5295094059350618"
         },
         {
           "key": "JSESSIONID",
@@ -172,7 +172,51 @@
           "hostOnly": true,
           "creation": "2021-01-03T18:22:25.859Z",
           "lastAccessed": "2021-01-03T18:22:25.859Z",
-          "id": "6640475233372354"
+          "id": "4270752839353624"
+        },
+        {
+          "key": "AUTH_SESSION_ID",
+          "value": "bc0809e8-022e-430a-b654-5bed7444e7b7.6fa96424e8b9",
+          "domain": "localhost",
+          "path": "/auth/realms/realm-a/",
+          "secure": true,
+          "httpOnly": true,
+          "extensions": [
+            "Version=1",
+            "SameSite=None"
+          ],
+          "hostOnly": true,
+          "creation": "2021-01-03T23:11:06.395Z",
+          "lastAccessed": "2021-01-03T23:11:06.395Z",
+          "id": "7017183720500251"
+        },
+        {
+          "key": "AUTH_SESSION_ID_LEGACY",
+          "value": "bc0809e8-022e-430a-b654-5bed7444e7b7.6fa96424e8b9",
+          "domain": "localhost",
+          "path": "/auth/realms/realm-a/",
+          "httpOnly": true,
+          "extensions": [
+            "Version=1"
+          ],
+          "hostOnly": true,
+          "creation": "2021-01-03T23:11:06.395Z",
+          "lastAccessed": "2021-01-03T23:11:06.395Z",
+          "id": "21299671029830214"
+        },
+        {
+          "key": "KC_RESTART",
+          "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4NzUxZWYyZC1iNTc5LTQwNTgtYjYzMS0wNDhjNzI0NGEwNzcifQ.eyJjaWQiOiJzcHJpbmdib290IiwicHR5Ijoib3BlbmlkLWNvbm5lY3QiLCJydXJpIjoiaHR0cDovL2xvY2FsaG9zdDo5MDAwL3BpZS9ncmVldGluZyIsImFjdCI6IkFVVEhFTlRJQ0FURSIsIm5vdGVzIjp7InNjb3BlIjoib3BlbmlkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3JlYWxtLWEiLCJyZXNwb25zZV90eXBlIjoiY29kZSIsInJlZGlyZWN0X3VyaSI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTAwMC9waWUvZ3JlZXRpbmciLCJzdGF0ZSI6ImFkM2JlMmRjLTYzYzYtNGE0YS04MTM4LTBkZDYxMzdmOTRlMSIsImNsaWVudF9yZXF1ZXN0X3BhcmFtX2xvZ2luIjoidHJ1ZSJ9fQ.qJQh8RM0VrEbXM9xz5LRilgZU9zSLgripP78hojXrKQ",
+          "domain": "localhost",
+          "path": "/auth/realms/realm-a/",
+          "httpOnly": true,
+          "extensions": [
+            "Version=1"
+          ],
+          "hostOnly": true,
+          "creation": "2021-01-03T23:11:06.395Z",
+          "lastAccessed": "2021-01-03T23:11:06.395Z",
+          "id": "7844546204276339"
         }
       ],
       "_type": "cookie_jar"
