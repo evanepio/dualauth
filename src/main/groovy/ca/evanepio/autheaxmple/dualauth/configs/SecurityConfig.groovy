@@ -6,7 +6,6 @@ import org.springframework.http.HttpMethod
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
-import org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer
 import org.springframework.security.oauth2.jwt.JwtDecoder
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder
 
@@ -22,9 +21,9 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests((authorizeRequests) ->
                         authorizeRequests
-                                .antMatchers(HttpMethod.GET, "/pie/**").hasAuthority("SCOPE_message:read")
-                                .antMatchers(HttpMethod.POST, "/cake/**").hasAuthority("SCOPE_message:write")
-                                .anyRequest().authenticated()
+                                .antMatchers(HttpMethod.GET, "/pie/**").authenticated()
+                                .antMatchers(HttpMethod.POST, "/cake/**").authenticated()
+                                .anyRequest().permitAll()
                 )
                 .oauth2ResourceServer().jwt()
         // @formatter:on
