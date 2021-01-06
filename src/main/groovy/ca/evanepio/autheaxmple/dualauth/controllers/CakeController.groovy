@@ -11,11 +11,19 @@ import java.security.Principal
 @RequestMapping("cake")
 class CakeController {
 
-    @GetMapping("greeting")
-    String greeting(Principal principal) {
+    @GetMapping("eat")
+    String eat(Principal principal) {
         JwtAuthenticationToken jwtToken = (JwtAuthenticationToken) principal
         def email = jwtToken.getTokenAttributes()['preferred_username']
         def name = jwtToken.getTokenAttributes()['name']
         return "Hello and have some cake, $name! $email"
+    }
+
+    @GetMapping("bake")
+    String bake(Principal principal) {
+        JwtAuthenticationToken jwtToken = (JwtAuthenticationToken) principal
+        def email = jwtToken.getTokenAttributes()['preferred_username']
+        def name = jwtToken.getTokenAttributes()['name']
+        return "Baking some cake, $name! $email"
     }
 }
