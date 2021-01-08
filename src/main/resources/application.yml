@@ -1,10 +1,2 @@
 server:
   port: 9000
-
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://localhost:8080/auth/realms/one
-          jwk-set-uri: http://localhost:8080/auth/realms/one/protocol/openid-connect/certs

@@ -1,0 +1,36 @@
+{
+  "exp": 1610070190,
+  "iat": 1610069890,
+  "auth_time": 1610069890,
+  "jti": "09c923d0-ea05-40be-9d63-77092bc340b4",
+  "iss": "http://localhost:8080/auth/realms/one",
+  "aud": "account",
+  "sub": "ad3c7c84-2aae-4289-a347-b9b2548141cc",
+  "typ": "Bearer",
+  "azp": "insomnia",
+  "session_state": "f23afda4-8b9b-4773-998b-d03fbe0ee3ff",
+  "acr": "1",
+  "realm_access": {
+    "roles": [
+      "offline_access",
+      "uma_authorization",
+      "user"
+    ]
+  },
+  "resource_access": {
+    "account": {
+      "roles": [
+        "manage-account",
+        "manage-account-links",
+        "view-profile"
+      ]
+    }
+  },
+  "scope": "email profile",
+  "email_verified": true,
+  "name": "Non Admin",
+  "preferred_username": "evanepio@gmail.com",
+  "given_name": "Non",
+  "family_name": "Admin",
+  "email": "evanepio@gmail.com"
+}
