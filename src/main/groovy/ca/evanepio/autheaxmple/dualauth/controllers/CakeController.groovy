@@ -1,6 +1,5 @@
 package ca.evanepio.autheaxmple.dualauth.controllers
 
-import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -13,17 +12,13 @@ class CakeController {
 
     @GetMapping("eat")
     String eat(Principal principal) {
-        JwtAuthenticationToken jwtToken = (JwtAuthenticationToken) principal
-        def email = jwtToken.getTokenAttributes()['preferred_username']
-        def name = jwtToken.getTokenAttributes()['name']
-        return "Hello and have some cake, $name! $email"
+        def name = principal.getName()
+        return "Hello and have some cake, $name!"
     }
 
     @GetMapping("bake")
     String bake(Principal principal) {
-        JwtAuthenticationToken jwtToken = (JwtAuthenticationToken) principal
-        def email = jwtToken.getTokenAttributes()['preferred_username']
-        def name = jwtToken.getTokenAttributes()['name']
-        return "Baking some cake, $name! $email"
+        def name = principal.getName()
+        return "Baking some cake, $name!"
     }
 }
